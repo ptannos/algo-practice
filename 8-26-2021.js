@@ -22,9 +22,12 @@ function productSum(array, depth = 1) {
   return sum * depth;
 }
 
+// THREE NUMBER SUM
+// Input: non-empty array of distinct integers and a target sum
+// return a 2-dimensional array of all the truples that add up to target
+
 function threeNumberSum(array, targetSum) {
   // Write your code here.
-
   array.sort((a, b) => a - b);
   let results = [];
 
