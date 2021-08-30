@@ -12,7 +12,7 @@ the depth of [] is 1; the depth of the inner array [[]] is 2. */
 function productSum(array, depth = 1) {
   let sum = 0;
 
-  for (let i = 0; (i = array.length); i++) {
+  for (let i = 0; i < array.length; i++) {
     if (Array.isArray(array[i])) {
       sum += productSum(array[i], depth + 1);
     } else {

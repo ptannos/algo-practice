@@ -22,3 +22,25 @@ function removeDuplicatesFromLinkedList(linkedList) {
   }
   return linkedList;
 }
+
+/* BUBBLE SORT
+
+Write a function that takes in an array of integers and returns a sorted version of that array. 
+Use the Bubble Sort algorithm to sort the array. */
+
+function bubbleSort(array) {
+  let counter = 0;
+
+  while (counter <= array.length) {
+    for (let i = 0; i < array.length - counter; i++) {
+      if (array[i] > array[i + 1]) {
+        let temp = array[i];
+        array[i] = array[i + 1];
+        array[i + 1] = temp;
+      }
+    }
+    counter++;
+  }
+
+  return array;
+}
