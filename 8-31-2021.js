@@ -44,3 +44,35 @@ function generateDocument(characters, document) {
   }
   return true;
 }
+
+/* FIRST NON-REPEATING CHARACTER
+
+Write a function that takes in a string of lowercase English-
+alphabet letters and returns the index of the string's first
+non-repeating character.
+
+The first non-repeating character is the first character in a 
+string that occurs only once. If there is no non-repeating
+characters, return -1. 
+*/
+
+function firstNonRepeatingCharacter(string) {
+  // Write your code here.
+  let hash = {};
+
+  for (let i = 0; i < string.length; i++) {
+    if (!hash[string[i]]) {
+      hash[string[i]] = 1;
+    } else {
+      hash[string[i]] += 1;
+    }
+  }
+
+  for (let i = 0; i < string.length; i++) {
+    if (hash[string[i]] === 1) {
+      return i;
+    }
+  }
+
+  return -1;
+}
