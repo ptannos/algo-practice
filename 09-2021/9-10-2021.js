@@ -13,3 +13,7 @@ function inOrderTraverse(tree, array) {
   }
   return array;
 }
+
+// function preOrderTraverse(tree, array) {
+
+// }
